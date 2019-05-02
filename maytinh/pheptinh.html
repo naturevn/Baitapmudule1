@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bai Tap Toan Tu</title>
+	<!-- <link rel="stylesheet" type="text/css" href="clear.css"> -->
+</head>
+<body>
+	<script>
+		function a_plus_b(form) {
+			a=eval(form.a.value)
+			b=eval(form.b.value)
+			let result =a+b
+			document.getElementById("namecaculator").innerHTML = " Addition : ";
+			document.getElementById("result").innerHTML = result;
+		}
+		function a_minus_b(form) {
+			a=eval(form.a.value)
+			b=eval(form.b.value)
+			let result =a-b
+			document.getElementById("namecaculator").innerHTML = " Suctraction : ";
+			document.getElementById("result").innerHTML = result;
+		}
+		function a_times_b(form) {
+			a=eval(form.a.value)
+			b=eval(form.b.value)
+			let result =a*b
+			document.getElementById("namecaculator").innerHTML = " Multiplication : ";
+			document.getElementById("result").innerHTML = result;
+		}
+		function a_div_b(form) {
+			a=eval(form.a.value)
+			b=eval(form.b.value)
+			let result =a/b
+			document.getElementById("namecaculator").innerHTML = " Division : ";
+			document.getElementById("result").innerHTML = result;
+		}
+		
+	</script>
+	<form name="formx">
+		<h2>
+			<input type="number" size="4" name="a">
+			<input type="number" size="4" name="b"><br>
+			<input type="button" value=" Addition(+) " onClick="a_plus_b(this.form)">
+			<input type="button" value=" Suctraction(-) " onClick="a_minus_b(this.form)">
+			<input type="button" value=" Multiplication(x) " onClick="a_times_b(this.form)">
+			<input type="button" value=" Division(/) " onClick="a_div_b(this.form)">
+			</h2>
+			result<div id="namecaculator"></div>
+			<div id="result"></div>
+			
+			
+		
+	</form>
+
+</body>
+</html>
