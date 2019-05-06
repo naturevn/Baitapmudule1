@@ -1,0 +1,15 @@
+.khung{
+	width: 350px; height: 350px; border: 5px solid black; background-color: 
+}
+.button1{
+	margin-top: 10px; margin-right: -5px ; margin-left: 5px ;border: 1px solid black; width: 340px; height: 35px; background-color: transparent;
+}
+.nut{
+	margin-top:20px;padding-left: 10px;
+}
+.nuttrai{
+	width: 50px;height: 50px;background-color: transparent;margin-left: 10px;
+}
+.allnut{
+	width: 50px;height: 50px;background-color: transparent;margin-left: 35px;
+}

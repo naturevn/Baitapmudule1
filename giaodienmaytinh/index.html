@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Giao Dien</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="khung">
+		<form name="calculator">
+		<input class="button1" type="button" type="text" name="answer">
+		<div class="nut">
+
+			<input class="nuttrai" type="button" onclick="calculator.answer.value += '1'" value='1'>
+			<input type="button" class="allnut" onclick="calculator.answer.value += '2'" value='2'>
+			<input type="button" class="allnut" onclick="calculator.answer.value += '3'" value='3'>
+			<input type="button" class="allnut" onclick="calculator.answer.value += '+'" value='+'>
+		</div>
+		<div class="nut">
+			<input type="button" class="nuttrai" " onclick="calculator.answer.value += '4'" value='4'>
+			<input type="button" class="allnut" onclick="calculator.answer.value += '5'" value='5'>
+			<input type="button" class="allnut" onclick="calculator.answer.value += '6'" value='6'>
+			<input type="button" class="allnut" onclick="calculator.answer.value += '-'" value='-'>
+		</div>
+		<div class="nut">
+			<input type="button" class="nuttrai" " onclick="calculator.answer.value += '7'" value='7'>
+			<input type="button" class="allnut" onclick="calculator.answer.value += '8'" value='8'>
+			<input type="button" class="allnut" onclick="calculator.answer.value += '9'" value='9'>
+			<input type="button" class="allnut" onclick="calculator.answer.value += '*'" value='X'>
+		</div>
+		<div class="nut">
+			<input type="button" class="nuttrai" " onclick="calculator.answer.value = ''" value='C'>
+			<input type="button" class="allnut" onclick="calculator.answer.value += '0'" value='0'>
+			<input type="button" class="allnut" onclick="calculator.answer.value = eval(calculator.answer.value)" value='='>
+			<input type="button" class="allnut" onclick="calculator.answer.value += '/'" value='/'>
+		</div>
+	</form>
+	</div>
+</body>
+</html>
