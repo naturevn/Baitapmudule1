@@ -5,7 +5,7 @@
 	<title>Nguyen Van Hai Duc</title>
 </head>
 <body>
-	<form id="all">
+	<form id="all" name="cdtt">
 		<input type="number" id="sonhap">
 		<select id="tvnm">
 			<option value="fVN">Việt Nam</option>
@@ -24,24 +24,19 @@
 			// alert(sonhap);
 			let a = document.getElementById('tvnm').value;
 			let b = document.getElementById('tmvn').value;
+			// let c = sonhap;
 			if((a==='fVN') && (b==='fUSD')){
 				hienthi = sonhap/23000;
 				document.getElementById('hienthi1').innerHTML='số tiền quy đổi sang USD là ' + hienthi + 'USD';
 			} else if ((a==='fUSD') && (b==='fVN')){
 				hienthi = sonhap*23000;
 				document.getElementById('hienthi1').innerHTML='số tiền quy đổi sang VND là ' + hienthi + 'VND' ;
-			} else if(((a==='fUSD') && (b==='fUSD'))|| ((a==='fVN') && (b==='fVN'))) {
-				document.getElemetById('hienthi1').innerHTML='số tiền quy đổi ' + sonhap ;
-			} else 
+			} else if(((a==='fUSD') && (b==='fUSD')) || ((a==='fVN') && (b==='fVN'))) {
+				document.getElementById('hienthi1').innerHTML='số tiền quy đổi sang VND là ' + sonhap ;
+			} 
+			else 
 				document.getElementById('hienthi1').innerHTML='Error';
-			// let soam = sonhap < 0;
-			// let soam1 = sonhap === '';
-			// if (soam1===''){
-			// 	document.getElementById('hienthi1').innerHTML='Phải Nhập Giá Trị';
-			// } else if (soam < 0) {
-			// 	document.getElementById('hienthi1').innerHTML='Error1';
-			// }
-			event.preventDefault();
+			// event.preventDefault();
 		}
 	</script>
 </body>
