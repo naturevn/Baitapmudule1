@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[Bài tập] Ứng dụng vui Faking Textarea on Typing</title>
+    <style>
+        body {
+            padding: 50px 550px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Type anthing slowly</h2>
+    <textarea id="key" cols="27" rows="10"></textarea>
+</body>
+<script>
+    let txt = "";
+    let array = ['T', 'ô', 'i', '', 'Y', 'ê', 'u', '', 'E', 'm', '', 'L', 'à', '', 'T', 'h', 'ậ', 't'];
+    let keyArray = document.getElementById('key').value;
+    if (array.length > 0) {
+        for (let i = 0; i < array.length; i++) {
+            txt += array[i];
+            if (keyArray > array.length) {
+                document.write("");
+            }
+        }
+    }
+    document.getElementById('txt').innerHTML = array[i];
+</script>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>week 2</title>
+</head>
+
+<body>
+    <script>
+        function soNguyenTo(number) {
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) return false;
+            }
+            return true;
+        }
+        let number = prompt('Nhập number', '');
+        let count = 0;
+        let N = 2;
+        let result = "";
+        while (count < number) {
+            if (soNguyenTo(N)) {
+                result += N + "  ";
+                count++;
+            }
+            N++;
+        }
+        document.write(result);
+    </script>
+</body>
+
+</html>

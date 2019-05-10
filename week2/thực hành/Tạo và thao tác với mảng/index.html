@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[Thực hành] Tạo và thao tác với mảng</title>
+    <style>
+        body {
+            padding-top: 50px;
+            padding-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" id="txtValue">
+    <!-- lấy giá trị nhập vào  txtValue-->
+    <input type="button" id="btAdd" value="Add" onclick="funcAdd();">
+    <input type="button" id="btDisplay" value="Display" onclick="funcDisplay();">
+    <div id="result"></div>
+</body>
+<script>
+    let x = 0;
+    let array = Array();
+
+    function funcAdd() {
+        array[x] = document.getElementById("txtValue").value; // gán giá trị txtValue vào mãng
+        alert("Element : " + array[x] + " Add at index " + x); // hiển thị giá trị value mới nhập vào input
+        x++ // tặng biến x lên 1 đơn vị để thêm mãng tiếp theo
+        document.getElementById("txtValue").value = " "; // trả về input trống (refresh input)
+    }
+
+    function funcDisplay() {
+        let e = "<hr>";
+        for (let i = 0; i < array.length; i++) {
+            e += "Element " + i + " = " + array[i] + "<br/>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+</script>
+
+</html>

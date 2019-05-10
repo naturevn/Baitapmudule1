@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[Bài tập] Từ điển</title>
+</head>
+
+<body>
+    <input type="text" id="key">
+    <input type="button" value="Search" onclick="search();">
+    <div id="result"></div>
+</body>
+<script>
+    let English = ['Hello', 'Bye', 'Welcome'];
+    let vietnam = ['Xin Chào', 'Tạm Biệt', 'Chào Mừng'];
+
+    function search() {
+        let b = document.getElementById('key').value;
+        for (let i = 0; i < English.length; i++) {
+            if (b === English[i]) {
+                document.getElementById('result').innerHTML = vietnam[i];
+            }
+        }
+    }
+</script>
+
+</html>
