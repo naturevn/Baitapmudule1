@@ -15,21 +15,25 @@
 
 <body>
     <h2>Type anthing slowly</h2>
-    <textarea id="key" cols="27" rows="10"></textarea>
+    <textarea id="key" cols="27" rows="10" oninput="myArray(this.value)"></textarea>
 </body>
 <script>
     let txt = "";
     let array = ['T', 'ô', 'i', '', 'Y', 'ê', 'u', '', 'E', 'm', '', 'L', 'à', '', 'T', 'h', 'ậ', 't'];
-    let keyArray = document.getElementById('key').value;
-    if (array.length > 0) {
-        for (let i = 0; i < array.length; i++) {
-            txt += array[i];
-            if (keyArray > array.length) {
-                document.write("");
+
+    function myArray(valNum) {
+        let keyArray = document.getElementById('key').value;
+        if (array.length > 0) {
+            for (let i = 0; i < array.length; i++) {
+                txt += array[i];
+                if (keyArray > array.length) {
+                    document.write("");
+                }
             }
         }
+        document.getElementById('txt').innerHTML = array[i];
+
     }
-    document.getElementById('txt').innerHTML = array[i];
 </script>
 
 </html>
