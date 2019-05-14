@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[Bài tập] Luyện tập tạo và sử dụng hàm 02</title>
+</head>
+
+<body>
+    <!-- Bài 1 -->
+    <fieldset>
+        <legend>Bài 1</legend>
+        <input type="number" id="bai1">
+        <input type="submit" value="Tinh" onclick="bai1();">
+        <span id="result1"></span>
+    </fieldset>
+    <!-- Bài 1 -->
+    <!-- Bài 2 -->
+    <fieldset>
+        <legend>Bài 2</legend>
+        <input type="number" id="bai2">
+        <input type="submit" value="Tinh Dien Tich" onclick="bai2dientich();">
+        <input type="submit" value="Tinh Chu Vi" onclick="bai2chuvi();">
+        <span id="result2"></span>
+    </fieldset>
+    <!-- Bài 2 -->
+    <!-- Bài 3 -->
+    <fieldset>
+        <legend>Bài 3</legend>
+        <input type="number" id="bai3">
+        <input type="submit" value="Tinh Gia Thừa" onclick="bai3();">
+        <span id="result3"></span>
+    </fieldset>
+    <!-- Bài 3 -->
+    <!-- Bài 4 -->
+    <fieldset>
+        <legend>Bài 4</legend>
+        <input type="number" id="bai4">
+        <input type="submit" value="Kiểm tra" onclick="bai4();">
+        <span id="result4"></span>
+    </fieldset>
+    <!-- Bài 4 -->
+    <!-- Bài 5 -->
+    <fieldset>
+        <legend>Bài 5</legend>
+        <input type="number" id="bai5">
+        <input type="submit" value="Add" onclick="bai5Add();">
+        <input type="submit" value="Hiện thị" onclick="bai5result();">
+        <span id="result5"></span>
+    </fieldset>
+    <!-- Bài 5 -->
+    <!-- Bài 6 -->
+    <fieldset>
+        <legend>Bài 6</legend>
+        <input type="number" id="bai6">
+        <input type="submit" value="Kiểm tra" onclick="bai6();">
+        <span id="result6"></span>
+    </fieldset>
+    <!-- Bài 6 -->
+    <!-- Bài 7 -->
+    <fieldset>
+        <legend>Bài 7</legend>
+        <input type="number" id="bai7">
+        <input type="submit" value="Kiểm tra" onclick="bai7Add();">
+        <input type="submit" value="Đảo" onclick="bai7result();">
+        <span id="result7"></span>
+    </fieldset>
+    <!-- Bài 7 -->
+
+</body>
+<script>
+    function bai1() {
+        let resultbaimot = 0;
+        let inputBaimot = document.getElementById('bai1').value;
+        resultbaimot = inputBaimot * inputBaimot;
+        document.getElementById('result1').innerHTML = 'Bình Phương của ' + inputBaimot + ' là ' + resultbaimot;
+    }
+
+    function bai2dientich() {
+        const PI = 3.14;
+        let inputbaihai1 = document.getElementById('bai2').value;
+        let tinhdientich = (inputbaihai1 * inputbaihai1) * PI;
+        document.getElementById('result2').innerHTML = 'Diện hình tròn S =' + tinhdientich;
+    }
+
+    function bai2chuvi() {
+        const PI = 3.14;
+        let inputbaihai2 = document.getElementById('bai2').value;
+        let tinhchuvi = inputbaihai2 * 2 * PI;
+        document.getElementById('result2').innerHTML = 'Chu vi hình tròn C =' + tinhchuvi;
+    }
+
+    function bai3() {
+        let inputbaihai3 = document.getElementById('bai3').value;
+        let input = 1;
+        for (let i = 2; i <= inputbaihai3; i++) {
+            input *= i;
+        }
+        document.getElementById('result3').innerHTML = 'Giai thừa của ' + inputbaihai3 + ' là ' + input;
+    }
+
+    function bai4() {
+        let inputbaihai4 = parseInt(document.getElementById('bai4').value);
+        if (inputbaihai4 === 0) {
+            let input = document.getElementById('result4').innerHTML = 'Giá trị nhập vào là ' + inputbaihai4;
+        } else {
+            let input = document.getElementById('result4').innerHTML = 'Giá trị nhập vào không phải là 0';
+        }
+    }
+    let inputArraybai6 = [];
+
+    function bai5Add() {
+        let idInput = document.getElementById('bai5').value;
+        inputArraybai6.push(idInput);
+        document.getElementById('result5').innerHTML = 'Giá trị trong mảng là ' + inputArraybai6.join(",");
+    }
+
+    function bai5result() {
+        let min = inputArray1[0]
+        for (let i = 1; i < inputArray1.length; i++) {
+            if (min > inputArray1[i]) {
+                min = inputArray1[i];
+            }
+            document.getElementById('result5').innerHTML = 'Giá trị nhỏ nhất ' + min;
+        }
+    }
+
+    function bai6() {
+        let inputBai6 = document.getElementById('bai6').value;
+        if (inputBai6 > 0) {
+            document.getElementById('result6').innerHTML = 'Giá trị ' + inputBai6 + ' Là số nguyên dương';
+        } else {
+            document.getElementById('result6').innerHTML = 'Giá trị ' + inputBai6 + ' Là số nguyên âm';
+        }
+    }
+    let inputArraybai7 = [];
+
+    function bai7Add() {
+        let inputBai7 = document.getElementById('bai7').value;
+        inputArraybai7.push(inputBai7);
+        document.getElementById('result7').innerHTML = 'Đảo 2 số vừa nhập vào ' + inputArraybai7.join(',');
+    }
+
+    function bai7result() {
+        let daoArray = inputArraybai7.reverse();
+        document.getElementById('result7').innerHTML = 'Đảo 2 số vừa nhập vào ' + daoArray;
+    }
+</script>
+
+</html>
