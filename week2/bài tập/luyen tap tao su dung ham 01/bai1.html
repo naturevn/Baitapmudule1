@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[Bài tập] Luyện tập tạo và sử dụng hàm 01</title>
+</head>
+
+<body>
+    <!-- Bài 1 -->
+    <fieldset>
+        <legend>Bài 1</legend>
+        <input type="submit" value="Hi! Chao Cau" onclick="alertMessage();">
+        <span id="result1"></span>
+    </fieldset>
+    <!-- Bài 1 -->
+    <!-- Bài 2 -->
+    <fieldset>
+        <legend>Bài 2</legend>
+        <input type="number" id="bai2">
+        <input type="submit" value="Bài 2" onclick="baihai()">
+        <span id="result2"></span>
+    </fieldset>
+    <!-- Bài 2 -->
+    <!-- Bài 3 -->
+    <fieldset>
+        <legend>Bài 3</legend>
+        <input type="number" id="bai31">
+        <input type="number" id="bai32">
+        <input type="submit" value="Bài 3" onclick="baiba()">
+        <span id="result3"></span>
+    </fieldset>
+    <!-- Bài 3 -->
+    <!-- Bài 5 -->
+    <fieldset>
+        <legend>Bài 5</legend>
+        <input type="text" id="bai5">
+        <input type="submit" value="Bài 5" onclick="bainam()">
+        <span id="result5"></span>
+    </fieldset>
+    <!-- Bài 5 -->
+</body>
+<script>
+    function alertMessage() {
+        document.getElementById('result1').innerHTML = 'Xin Chào Các Cậu';
+    }
+
+    function baihai() {
+        let inputBaihai = parseInt(document.getElementById('bai2').value);
+        document.getElementById('result2').innerHTML = (inputBaihai += 1);
+    }
+
+    function baiba() {
+        let a = parseInt(document.getElementById('bai31').value);
+        let b = parseInt(document.getElementById('bai32').value);
+        if (a > b) {
+            document.getElementById('result3').innerHTML = 'Gía trị ' + a + ' lớn hơn ' + b;
+        } else if (a < b || a === b) {
+            document.getElementById('result3').innerHTML = (a + b);
+        }
+    }
+    let tenngoisao = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let transName = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    let index;
+
+    function bainam() {
+        let inputBainam = document.getElementById('bai5').value;
+        for (let i = 0; i < tenngoisao.length; i++) {
+            if (inputBainam === tenngoisao[i]) {
+                document.getElementById('result5').innerHTML = transName[i];
+            } else {
+                document.getElementById('result5').innerHTML = 'Tên không tìm thấy';
+            }
+        }
+
+    }
+</script>
+
+</html>
