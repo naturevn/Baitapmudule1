@@ -37,7 +37,7 @@
     <!-- Bài 4 -->
     <fieldset>
         <legend>Bài 4</legend>
-        <input type="number" id="bai4">
+        <input type="" id="bai4">
         <input type="submit" value="Kiểm tra" onclick="bai4();">
         <span id="result4"></span>
     </fieldset>
@@ -102,11 +102,11 @@
     }
 
     function bai4() {
-        let inputbaihai4 = parseInt(document.getElementById('bai4').value);
-        if (inputbaihai4 === 0) {
-            let input = document.getElementById('result4').innerHTML = 'Giá trị nhập vào là ' + inputbaihai4;
+        let inputbaihai4 = document.getElementById('bai4').value;
+        if (isNaN(inputbaihai4) === false) {
+            let input = document.getElementById('result4').innerHTML = 'Giá trị nhập vào là số';
         } else {
-            let input = document.getElementById('result4').innerHTML = 'Giá trị nhập vào không phải là 0';
+            let input = document.getElementById('result4').innerHTML = 'Giá trị nhập vào là chử';
         }
     }
     let inputArraybai6 = [];
