@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Bài 1</legend>
+
+        <br>
+        <input type="button" value="Number" onclick="bai1();">
+        <span id="result1"></span>
+
+    </fieldset>
+    <fieldset>
+        <legend>Bài 2</legend>
+        <input type="button" value="Number" onclick="bai2();">
+        <span id="result2"></span>
+    </fieldset>
+</body>
+<script>
+    function bai1() {
+        let num = parseInt(prompt("Enter Number: "));
+        document.getElementById('result1').innerHTML = num *= num;
+    }
+
+
+    function bai2() {
+        let array = ['d', '1', 'c', 'u'];
+        let daoarray = array.reverse();
+        document.getElementById('result2').innerHTML = daoarray;
+    }
+</script>
+
+</html>
