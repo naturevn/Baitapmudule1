@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>[*Bài tập] Kiểm tra từ đối xứng</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+
+<body>
+</body>
+<script>
+    function isPalindrome(value) {
+        console.log(value.length);
+        for (let i = 0; i < (value.length - 1) / 2; i++) {
+            if (value[i] !== value[(value.length - 1) - i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+    let value = prompt("Enter value: ", "");
+    let valString = value.toString();
+    if (isPalindrome(valString)) {
+        alert("is symmetrical");
+    } else alert("not a symmetrical word")
+</script>
+
+</html>
