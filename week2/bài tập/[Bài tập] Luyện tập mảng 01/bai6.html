@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[*Bài tập] Luyện tập mảng 01</title>
+</head>
+
+<body>
+    <input type="number" id="sonam">
+    <input type="button" value="kiem tra gia tri" onclick="kiemtra()">
+</body>
+<script>
+    let array = [10, 11, 13, 9, 20, 2, 5, 7, 12, 25];
+
+
+    function kiemtra() {
+        for (let i = 0; i < array.length; i++) {
+            let v = parseInt(document.getElementById("sonam").value);
+            if (array[i] === 5) {
+                document.write('V is in the array' + ' vi tri ' + i);
+                break;
+            } else {
+                document.write('V is not in the array');
+            }
+        }
+    }
+</script>
+
+</html>

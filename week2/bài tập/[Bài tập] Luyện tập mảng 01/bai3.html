@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[*Bài tập] Luyện tập mảng 01</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let inputArray = new Array(5, 3, 2, 7, 11, 19, 9, 20, 10, 30);
+    let max = inputArray[0];
+    let diem = inputArray[0];
+    for (let i = 1; i < inputArray.length; i++) {
+        if (max < inputArray[i]) {
+            max = inputArray[i];
+        }
+        diem += inputArray[i];
+    }
+    document.write('giá trị lớn nhất trong mảng ' + max + ' giá trị trung bình của mảng ' + diem / inputArray.length);
+</script>
+
+</html>
