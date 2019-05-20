@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+
+<body>
+    <input type="number" id="key">
+    <input type="button" value="Check" id="convert">
+    <div id="result"></div>
+    <div id="result2"></div>
+</body>
+<script>
+    function Temperature(inputc) {
+        this.inputc = inputc;
+    }
+    Temperature.prototype.inputc = function() {
+        return this.inputc;
+    }
+    Temperature.prototype.getToF = function() {
+        return this.inputc * 1.8000 + 32;
+    }
+    Temperature.prototype.getToK = function() {
+        return this.inputc + 273.15;
+    }
+    document.getElementById("convert").onclick = function() {
+        let inkey = document.getElementById('key').value;
+        let dt = new Temperature(inkey);
+        let printfToF = dt.getToF();
+        let printfToK = dt.getToK();
+        document.getElementById('result').innerHTML = 'Cover To F : ' + printfToF;
+        document.getElementById('result2').innerHTML = 'Cover To K : ' + printfToK;
+    }
+</script>
+
+</html>
