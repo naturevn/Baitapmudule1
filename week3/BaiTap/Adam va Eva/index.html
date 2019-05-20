@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adam và Eva</title>
+</head>
+
+
+<body>
+    <input type="button" value="Adam" onclick="adam();">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="resultadam"></span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <input type="button" value="Eva" onclick="eva();">
+</body>
+<script>
+    function Apple(weight) {
+        this.weight = 10;
+        this.decrease = function(weight) {
+            if (this.weight > 0) {
+                this.weight--;
+            }
+            return this.weight;
+        }
+        this.isEmpty = function(weight) {
+            if (this.weight > 0) {
+                document.write("quả táo còn");
+            } else {
+                document.write("hết quả táo");
+            }
+        }
+        this.getWeight = function(weight) {
+            return this.weight;
+        }
+    }
+
+    function Human(name, gender, weight) {
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+        this.talk = [];
+        this.isMale = function(gender) {
+            if (this.gender === true) {
+                document.write('Nam');
+            } else {
+                document.write('Nữ');
+            }
+        }
+        this.setGender = function(gender) {
+            this.gender;
+        }
+        this.checkApple = function(apple) {
+            return this.apple.getWeight();
+        }
+        this.eat = function(apple) {
+            apple.decrease();
+        }
+        this.getName = function(name) {
+            return this.name;
+        }
+        this.setName = function(name) {
+            this.name = name;
+        }
+        this.getWeight = function(weight) {
+            return this.weight = weight;
+        }
+        this.setWeight = function(weight) {
+            this.weight = weight;
+        }
+    }
+    let applered = new Apple();
+    let getweightred = applered.getWeight();
+    document.getElementById('resultadam').innerHTML = (getweightred);
+    human = new Human("ĐỨc", true, 40);
+    human1 = new Human("Gái", false, 30);
+
+    function adam() {
+        human.eat(applered);
+        document.getElementById('resultadam').innerHTML = 'Adam đã ăn 1 phát nên quả táo còn ' + applered.getWeight();
+    }
+
+    function eva() {
+        human1.eat(applered);
+        document.getElementById('resultadam').innerHTML = 'Eva đã cắn 1 phát nên quả táo còn ' + applered.getWeight();
+    }
+</script>
+
+</html>
