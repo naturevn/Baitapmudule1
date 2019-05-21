@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nguyễn Đức Thanh Hoàng C0419H1</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <h3>Xây dựng lớp mô tả điện thoại</h3>
+    <div class="row">
+        <div class="col-6">Nokia
+            <!-- Left -->
+            <div class="khungleft">
+                <div class="fa">&#xf240;
+                </div>
+                <span><img class="pin" src="sac.png"></span>
+                <div class="main">
+                    <input type="button" value="kiểm tra trạng thái điện thoại">
+                    <input type="button" value="turn on">
+                    <input type="button" value="turn off"><br><br><br><br><br><br>
+                    <input type="button" value="Nhận tin">
+                    <input type="button" value="gửi tin" onclick="guimessage()">
+                    <input type="button" value="đã gửi"><br>
+                    <input type="text" id="guidi"><br>
+
+                </div>
+                <div class="menu">
+                    <input type="button" value="..." class="iconmenu">
+
+                    </input>
+                    <input type="button" value="..." class="iconmenu2">
+
+                    </input>
+                    <input type="button" value="..." class="iconmenu3">
+
+                    </input>
+                    <input type="button" value="..." class="iconmenu4">
+
+                    </input>
+                </div>
+            </div>
+            <!-- Left -->
+        </div>
+        <!-- Right -->
+        <div class="col-6">Iphone
+            <div class="khungright">
+                <div class="fa">&#xf240;</div>
+                <span><img class="pin" src="sac.png"></span>
+                <div class="main">
+                    <input type="button" value="kiểm tra trạng thái điện thoại">
+                    <input type="button" value="turn on">
+                    <input type="button" value="turn off"><br><br><br><br><br><br>
+                    <input type="button" value="Nhận tin" onclick="nhanmessage()">
+                    <input type="button" value="gửi tin">
+                    <input type="button" value="đã gửi"><br>
+                    <input type="text" id="nhan"><br>
+                </div>
+                <div class="menu">
+                    <input type="button" value="..." class="iconmenu">
+
+                    </input>
+                    <input type="button" value="..." class="iconmenu2">
+
+                    </input>
+                    <input type="button" value="..." class="iconmenu3">
+
+                    </input>
+                    <input type="button" value="..." class="iconmenu4">
+
+                    </input>
+                </div>
+            </div>
+            <!-- Right -->
+        </div>
+    </div>
+</body>
+<script>
+    function Mobile(battery) {
+        this.battery = 100;
+        this.hopthuden = [];
+        this.hopthudi = [];
+        this.dagui = [];
+        this.status = true;
+        this.setmessage = function(tinnhan) {
+            this.tinnhan = tinnhan;
+        }
+        this.getmessage = function() {
+            return this.tinnhan;
+        }
+        this.sendmessage = function(message) {
+            this.hopthudi.push(message);
+        }
+        this.laymessage = function(message) {
+            this.hopthuden.push(message);
+            return this.hopthuden[0];
+        }
+    };
+
+    let nokia = new Mobile(100);
+
+    let Iphone = new Mobile(100);
+
+    function guimessage() {
+        let tinnhan = document.getElementById("guidi").value;
+        nokia.sendmessage(tinnhan);
+        Iphone.laymessage(tinnhan);
+    }
+
+    function nhanmessage() {
+        let nhantin = Iphone.laymessage();
+        document.getElementById("nhan").value = nhantin;
+    }
+</script>
+
+</html>

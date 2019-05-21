@@ -1,0 +1,145 @@
+.khungleft {
+    width: 300px;
+    height: 500px;
+    border: black 1px solid;
+}
+
+.pin {
+    width: 20px;
+    height: 10px;
+    border: black 1px solid;
+    margin-top: 5px;
+    margin-right: 5px;
+    float: right;
+}
+
+.main {
+    width: 288px;
+    height: 415px;
+    border: black 1px solid;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.menu {
+    width: 288px;
+    height: 47px;
+    margin-top: 7px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: black 1px solid;
+}
+
+.iconmenu {
+    position: absolute;
+    width: 47px;
+    height: 36px;
+    margin-top: 4px;
+    margin-left: 21px;
+    margin-right: 5px;
+    border: black 1px solid;
+}
+
+.iconmenu2 {
+    position: absolute;
+    width: 47px;
+    height: 36px;
+    margin-top: 4px;
+    margin-left: 87px;
+    margin-right: 5px;
+    border: black 1px solid;
+}
+
+.iconmenu3 {
+    position: absolute;
+    width: 47px;
+    height: 36px;
+    margin-top: 4px;
+    margin-left: 153px;
+    margin-right: 5px;
+    border: black 1px solid;
+}
+
+.iconmenu4 {
+    position: absolute;
+    width: 47px;
+    height: 36px;
+    margin-top: 4px;
+    margin-left: 222px;
+    margin-right: 5px;
+    border: black 1px solid;
+}
+
+.khungright {
+    width: 300px;
+    height: 500px;
+    border: black 1px solid;
+}
+
+.pin {
+    width: 20px;
+    height: 10px;
+    border: black 1px solid;
+    margin-top: 5px;
+    margin-right: 5px;
+    float: right;
+}
+
+.main {
+    width: 288px;
+    height: 415px;
+    border: black 1px solid;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.menu {
+    width: 288px;
+    height: 47px;
+    margin-top: 7px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: black 1px solid;
+}
+
+.iconmenu {
+    position: absolute;
+    width: 47px;
+    height: 36px;
+    margin-top: 4px;
+    margin-left: 21px;
+    margin-right: 5px;
+    border: black 1px solid;
+}
+
+.iconmenu2 {
+    position: absolute;
+    width: 47px;
+    height: 36px;
+    margin-top: 4px;
+    margin-left: 87px;
+    margin-right: 5px;
+    border: black 1px solid;
+}
+
+.iconmenu3 {
+    position: absolute;
+    width: 47px;
+    height: 36px;
+    margin-top: 4px;
+    margin-left: 153px;
+    margin-right: 5px;
+    border: black 1px solid;
+}
+
+.iconmenu4 {
+    position: absolute;
+    width: 47px;
+    height: 36px;
+    margin-top: 4px;
+    margin-left: 222px;
+    margin-right: 5px;
+    border: black 1px solid;
+}
