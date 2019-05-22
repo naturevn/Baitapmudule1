@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>[Bài tập] Luyện tập sử dụng biểu thức chính quy</title>
+</head>
+
+<body>
+    <h2>[Bài tập] Luyện tập sử dụng biểu thức 2</h2>
+    <fieldset>
+        <legend>Bài tính ngày tháng năm sinh</legend>
+        <div>Giây : <input type="number" id="idgiay" value="20" /></div>
+        <br />
+        <div>Phút : <input type="number" id="idphut" value="20" /></div>
+        <br />
+        <div>Giờ : <input type="number" id="idgio" value="20" /></div>
+        <br />
+        <div>Ngày : <input type="number" id="idngay" value="19" /></div>
+        <br />
+        <div>Tháng : <input type="number" id="idthang" value="11" /></div>
+        <br />
+        <div>Năm : <input type="number" id="idnam" value="1997" /></div>
+        <input type="button" value="Check" onclick="kiemtra()" />
+        <div id="resultnam"></div>
+        <div id="resultthang"></div>
+        <div id="resultngay"></div>
+        <div id="resultgio"></div>
+        <div id="resultphut"></div>
+        <div id="resultgiay"></div>
+    </fieldset>
+    <fieldset>
+        <legend>Làm việc với đối tượng String</legend>
+        Chuỗi : Tôi yêu ngôn ngữ lập trình Javascript có
+        <span id="result"></span>chữ a
+    </fieldset>
+</body>
+<script src="script.js">
+    let a = new date();
+</script>
+
+</html>
