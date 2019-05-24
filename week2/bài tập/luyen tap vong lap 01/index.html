@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Luyện tập vòng lặp 01</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>bài1</legend>
+        <p>Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.</p>
+        <span id="bai1"></span>
+    </fieldset>
+    <fieldset>
+        <legend>bài2</legend>
+        <p>Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.</p>
+        <span id="bai2"></span>
+    </fieldset>
+</body>
+<script>
+    //bài 1
+    let i = 1;
+    while (i == !99 || i > 100) {
+        document.write(+i);
+        i++;
+    }
+    document.getElementById('bai1').innerHTML = ("hoàn thành");
+
+    // end bai 1
+    // bài 2 
+    var input = parseInt(prompt("Nhập nhiệt đô bài 2 "));
+    while (input > 100) {
+        document.getElementById('bai2').innerHTML = ("Để không thành than thì bạn nên giảm nhiệt độ xuống !");
+        break;
+    }
+    while (input < 20) {
+        document.getElementById('bai2').innerHTML = ("Để tránh bị cảm cúm bạn nên tăng nhiệt độ lên !")
+        break;
+    }
+    //bài 2
+</script>
+
+</html>
