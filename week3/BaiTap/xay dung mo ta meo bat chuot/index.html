@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển ứng dụng mô phỏng lại quá trình mèo bắt chuột và ăn chuột.</title>
+</head>
+
+<div id="rat"></div>
+<div id="speedrat"></div>
+<div id="messrat"></div>
+<div id="statusrat"></div>
+<div id="cat"></div>
+<div id="maxspeedcat"></div>
+<div id="messcat"></div>
+
+<input type="submit" id="catch" onclick="batchuot()" value="Bắt chuột">
+
+
+<body>
+    <script>
+        function icRat(name, mess, speed, status) {
+            this.name = name;
+            this.mess = mess;
+            this.speed = speed;
+            this.status = status;
+            this.speakingrat = function() {
+                console.log("Chít");
+            };
+            this.messratdie = function() {
+                this.mess -= this.mess;
+                return this.mess;
+            }
+        }
+
+        function icCat(name, mess, maxspeed) {
+            this.name = name;
+            this.mess = mess;
+            this.maxspeed = maxspeed;
+            this.speakingcat = function() {
+                console.log("meoww");
+            }
+            this.messcateat = function() {
+                this.mess += rat.mess;
+                return this.mess;
+            }
+        }
+        let rat = new icRat("Chuột", 1, 20, "Đang mập béo");
+        document.getElementById("rat").innerHTML = "Tên : " + rat.name;
+        document.getElementById("speedrat").innerHTML = "Tốc độ : " + rat.speed + " km/h";
+        document.getElementById("messrat").innerHTML = "Trọng lượng : " + rat.mess + " kg";
+        document.getElementById("statusrat").innerHTML = "Trạng thái : " + rat.status;
+        let cat = new icCat("Mèo", 7, 30);
+        document.getElementById("cat").innerHTML = "Tên : " + cat.name;
+        document.getElementById("messcat").innerHTML = "Trọng lượng : " + cat.mess + " kg";
+        document.getElementById("maxspeedcat").innerHTML = "Tốc độ tối da : " + cat.maxspeed + " km/s";
+
+        function batchuot() {
+            if (cat.maxspeed > rat.speed) {
+                alert("Thông báo: Đã bắt được chuột");
+                cat.messcateat();
+                rat.messratdie();
+                document.getElementById("statusrat").innerHTML = "Trạng thái: Đã chết";
+                document.getElementById("messrat").innerHTML = "Trọng lượng : " + rat.mess + " kg";
+                document.getElementById("messcat").innerHTML = "Trọng lượng : " + cat.mess + " kg";
+            } else {
+                alert("Thông báo: Chạy chậm thế sao bắt được Jerry");
+            }
+        }
+    </script>
+</body>
+
+</html>
