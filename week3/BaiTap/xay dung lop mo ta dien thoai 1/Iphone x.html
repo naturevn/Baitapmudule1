@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>IPHONE X</title>
+</head>
+
+<body>
+    <div class="row container">
+        <div class="col-lg-6">
+            <h2>IPhone X</h2>
+            <div class="khung">
+                <input type="image" id="signal" alt="Login" src="image/signal.png"> &emsp;&emsp;
+                <span id="clock"></span>
+                <input type="image" id="battery" alt="Login" src="image/battery.png">
+                <div class="main">
+                    <div id="showMess" style="display: none;">
+                        <input type="text" style="width:258px;height: 100px;" id="guidi"></input>
+                        <input type="button" value="Gửi Thư" onclick="guimessage();">
+                    </div>
+                </div>
+                <div class="menu">
+                    <input type="image" id="phone" alt="Login" src="image/phone.png">
+                    <input type="image" id="sms" alt="Login" onclick="sendMessage()" src="image/message.png">
+                    <input type="image" id="contacts" alt="Login" src="image/contacts.png">
+                    <input type="image" id="settings" alt="Login" src="image/settings.png">
+                    </br>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <h2>Samsung S10+</h2>
+            <div class="khung">
+                <input type="image" id="signal" alt="Login" src="image/signal.png">&emsp;&emsp;
+                <span id="clockss"></span>
+                <input type="image" id="battery" alt="Login" src="image/battery.png">
+                <div class="main">
+                    <div id="showMess2" style="display: none;">
+                        <input type="text" style="width:258px;height: 100px;" id="nhan"></input>
+                        <!-- <input type="button" value="Nhận Thư" onclick="nhanmessage();"> -->
+                    </div>
+                </div>
+                <div class="menu">
+                    <input type="image" id="phone" alt="Login" src="image/ssphone.png">
+                    <input type="image" id="sms" alt="Login" src="image/ssmessages.png" onclick="sendMessage2()">
+                    <input type="image" id="contacts" alt="Login" src="image/sscontacts.png">
+                    <input type="image" id="settings" alt="Login" src="image/sssettings.png">
+                    </br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    function Mobile(battery) {
+        this.battery = 100;
+        this.hopthuden = [];
+        this.hopthudi = [];
+        this.dagui = [];
+        this.status = true;
+        this.setmessage = function(tinnhan) {
+            this.tinnhan = tinnhan;
+        }
+        this.getmessage = function() {
+            return this.tinnhan;
+        }
+        this.sendmessage = function(message) {
+            this.hopthudi.push(message);
+        }
+        this.laymessage = function(message) {
+            this.hopthuden.push(message);
+            return this.hopthuden[0];
+        }
+    };
+
+    let nokia = new Mobile(100);
+
+    let Iphone = new Mobile(100);
+
+    function guimessage() {
+        let tinnhan = document.getElementById("guidi").value;
+        nokia.sendmessage(tinnhan);
+        Iphone.laymessage(tinnhan);
+        document.getElementById('guidi').value = '';
+    }
+
+    //Hiden mess 1
+    function sendMessage() {
+        var x = document.getElementById("showMess"); //none 
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+    //Hiden mess 2
+    function sendMessage2() {
+        var x = document.getElementById("showMess2"); //none 
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        let nhantin = Iphone.laymessage();
+        document.getElementById("nhan").value = nhantin;
+    }
+    //clock
+    function refrClock() {
+
+        var d = new Date();
+        var s = d.getSeconds();
+        var m = d.getMinutes();
+        var h = d.getHours();
+        var am_pm;
+
+        if (s < 10) {
+            s = "0" + s
+        }
+
+        if (m < 10) {
+            m = "0" + m
+        }
+
+        if (h > 12)
+
+        {
+            h -= 12;
+            AM_PM = "PM"
+        } else {
+            AM_PM = "AM"
+        }
+
+        if (h < 10) {
+            h = "0" + h
+        }
+
+        document.getElementById("clock").innerHTML = "😂" + h + ":" + m + ":" + s + "😂";
+        setTimeout("refrClock()", 1000);
+        document.getElementById("clockss").innerHTML = "😂" + h + ":" + m + ":" + s + "😂";
+        setTimeout("refrClock()", 1000);
+    }
+    refrClock();
+</script>
+
+</html>
