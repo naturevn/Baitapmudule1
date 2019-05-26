@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Bài 1</legend>
+        <input type="number" id="inputA1">
+        <input type="button" value="click" onclick="bai1()">
+        <span id="result1"></span>
+    </fieldset>
+    <fieldset>
+        <legend>Bài 2</legend>
+        <input type="number" id="inputA2">
+        <input type="button" value="click" onclick="bai2()">
+        <span id="result2"></span>
+    </fieldset>
+    <fieldset>
+        <legend>Bài 3</legend>
+        <input type="number" id="inputA3">
+        <input type="button" value="click" onclick="bai3()">
+        <span id="result3"></span>
+    </fieldset>
+</body>
+<script>
+    function bai1() {
+        let getinputA = document.getElementById('inputA1').value;
+        let dF = getinputA * 9 / 5 + 32;
+        document.getElementById('result1').innerHTML = "giá trị độ C = " + getinputA + " Sang độ F " + dF;
+    }
+
+    function bai2() {
+        let getinputA = document.getElementById('inputA2').value;
+        let feet = getinputA * 3.2808;
+        document.getElementById('result2').innerHTML = "Đổi độ meet sang feet là " + feet;
+    }
+
+    function bai3() {
+        let getinputA = document.getElementById('inputA3').value;
+        let dientich = getinputA * 4;
+        document.getElementById('result3').innerHTML = "Diện tích hình vuông có cạnh a = " + getinputA + "  là " + dientich;
+    }
+</script>
+
+</html>
