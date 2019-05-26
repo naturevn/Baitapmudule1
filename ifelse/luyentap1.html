@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Bài 1</legend>
+        <input type="number" id="inputA1">
+        <input type="number" id="inputB1">
+        <input type="button" value="click" onclick="bai1()">
+        <span id="result1"></span>
+    </fieldset>
+    <fieldset>
+        <legend>Bài 2</legend>
+        <input type="number" id="inputA2">
+        <input type="button" value="click" onclick="bai2()">
+        <span id="result2"></span>
+    </fieldset>
+</body>
+<script>
+    function bai1() {
+        let getInputA = parseInt(document.getElementById('inputA1').value);
+        let getInputB = parseInt(document.getElementById('inputB1').value);
+        if (getInputA % getInputB === 0)
+            document.getElementById('result1').innerHTML = getInputA + " chia hết cho " + getInputB;
+        else
+            document.getElementById('result1').innerHTML = getInputA + " không chia hết cho " + getInputB;
+    }
+
+    function bai2() {
+        let getInputA = document.getElementById('inputA2').value;
+        if (getInputA >= 16)
+            document.getElementById('result2').innerHTML = "Tuổi của bạn là " + getInputA + " đủ tuổi vào lớp 10";
+        else
+            document.getElementById('result2').innerHTML = "Tuổi của bạn là " + getInputA + " chưa đủ tuổi vào lớp 10";
+    }
+</script>
+
+</html>
