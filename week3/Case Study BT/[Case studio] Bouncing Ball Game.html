@@ -4,28 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-        
-        canvas {
-            background: rgb(167, 229, 248);
-            display: block;
-            margin: 0 auto;
-            border: 1px black solid;
-        }
-    </style>
-    <title>Case Study</title>
+    <title>[Case studio] Bouncing Ball Game</title>
 </head>
+<style>
+    canvas {
+        background: #dddddd;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    body {
+        text-align: center;
+        font-family: 'Cabin', monospace;
+    }
+   
+    div {
+        margin-right: 1px;
+    }
+</style>
 
 <body>
-    <center><input type="button" value="Bắt đầu" onclick="star()"></center>
-    <canvas id="myCanvas" width="600" height="520"></canvas>
-</body>
 
+    <h2>Game Bouncing Ball Game</h2>
+    <button type="button" class="btn btn-success" onclick="star()">Star</button>
+    <canvas id="myCanvas" width="620" height="480"></canvas><br>
+
+</body>
 
 <script src="js/script.js">
 </script>
