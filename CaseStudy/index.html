@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title> Case Study </title>
+</head>
+
+<body>
+    <div class="bg-head">
+        <h3 style="text-align: center; color: cornsilk">Case Study</h3>
+        <h3 style="text-align: center; color: cornsilk">Tên học viên : Nguyễn Văn Hải Đức</h3>
+        <h3 style="text-align: center; color: cornsilk">Lớp : C0419H1</h3>
+    </div>
+    <div class="bg-container">
+        <div style="text-align: center">
+            <img src="css/img/muiten.gif" width="5%">
+            <input type="button" value="Bắt đầu" class="btn btn-warning" id="btNewgame" onclick="newGame()">
+            <input type="button" value="Tăng tốc" class="btn btn-warning" id="btNewgame" onclick="tangLever()">
+            <img src="css/img/new.png" width="3%">
+        </div>
+        <canvas id="myCanvas" width="720" height="500" style="display:block;background-color: rgb(255, 255, 255);"></canvas>
+        <img style="display: none" src="logo.jpg" id="img" width="720px" height="500px">
+        <div class="text-center">
+            <!-- Button HTML (to Trigger Modal) -->
+            <img src="http://icons.iconarchive.com/icons/graphicloads/100-flat-2/256/information-icon.png" href="#myModal" class="trigger-btn" data-toggle="modal" alt="Thông tin liên hệ"></img>
+        </div>
+
+        <!-- Modal HTML -->
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog modal-login">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="avatar">
+                            <img src="file:///F:/IMG/musicdefaut.png" width="100px" alt="Avatar">
+                        </div>
+                        <h4 class="modal-title"><img src="https://codegym.vn/wp-content/uploads/2019/02/Logo.png" width="80%"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/examples/actions/confirmation.php" method="post">
+                            <div class="form-group" style="text-align: center;">
+                                <p>Case Study Ping Pongs</p>
+                                <p>Nguyễn Văn Hải Đức</p>
+                                <p>C0419H1</p>
+                                <p>0389264686</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="game.js"></script>
+
+</html>

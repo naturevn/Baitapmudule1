@@ -1,0 +1,133 @@
+.body {
+    padding: 30px;
+}
+
+#myCanvas {
+    border: 2px solid rgb(0, 0, 0);
+    margin-left: 307px;
+    margin-top: -1px;
+}
+
+.bg-head {
+    background: url(img/bg-top.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-top: -20px;
+}
+
+.bg-container {
+    background: url(img/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-top: -10px;
+    /* position: absolute; */
+    width: 100%;
+}
+
+.modal-login {
+    color: #636363;
+    width: 250px !important;
+}
+
+.modal-login .modal-content {
+    /* padding: 20px; */
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+}
+
+.modal-login .modal-header {
+    border-bottom: none;
+    position: relative;
+    justify-content: center;
+}
+
+.modal-login h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 -15px;
+}
+
+.modal-login .form-control:focus {
+    border-color: #70c5c0;
+}
+
+.modal-login .form-control,
+.modal-login .btn {
+    min-height: 40px;
+    border-radius: 3px;
+}
+
+.modal-login .close {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+.modal-login .avatar {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -52px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    z-index: 9;
+    background: #60c7c1;
+    padding: 15px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.modal-login .avatar img {
+    width: 115px;
+    position: absolute;
+    margin-top: -25px;
+    margin-left: -25px;
+}
+
+.modal-login.modal-dialog {
+    margin-top: 80px;
+}
+
+.modal-login .btn {
+    color: #fff;
+    border-radius: 4px;
+    background: #60c7c1;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    border: none;
+}
+
+.modal-login .btn:hover,
+.modal-login .btn:focus {
+    background: #45aba6;
+    outline: none;
+}
+
+.trigger-btn {
+    position: absolute;
+    margin-top: -82px;
+    width: 70px;
+    margin-left: 600px;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: rgb(3, 0, 0) !important;
+}
+
+.modal-login.modal-dialog {
+    margin-top: 271px !important;
+    margin-left: 1050px !important;
+}
