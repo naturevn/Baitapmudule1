@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4 Canvas</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1270px" height="630px" style="border:1px solid #d3d3d3"></canvas>
+    <script>
+        class Rectangle {
+            constructor(x, y, chieurong, chieucao, mau) {
+                this.x = x;
+                this.y = y;
+                this.chieurong = chieurong;
+                this.chieucao = chieucao;
+                this.mau = mau;
+            }
+
+            render() {
+                var c = document.getElementById("myCanvas");
+                var context = c.getContext("2d");
+                context.fillStyle = this.mau;
+                context.fillRect(this.x, this.y, this.chieurong, this.chieucao);
+            }
+        }
+        var drawHinh = new Rectangle(10, 10, 200, 100, "#000000");
+        drawHinh.render();
+    </script>
+</body>
+
+</html>

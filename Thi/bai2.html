@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài 2 | Viết hàm tryRemoveFromArray();</title>
+</head>
+
+<body>
+    <h2>Viết hàm tryRemoveFromArray() nhận vào một mảng và một số nguyên index, trả về mảng ban đầu đã được loại bỏ phần tử tại vị trí index nếu index hợp lệ. nếu index không hợp lệ, trả về mảng ban đầu</h2>
+    <fieldset>
+        <legend>Bài 2</legend>
+        <span id="result"></span>
+    </fieldset>
+</body>
+<script>
+    let mang = [12, 6, 3, 7, 21, 5, 7];
+    let index = 4;
+
+    function tryRemoveFromArray(mang, index) {
+        if (index >= 0 && index < mang.length) {
+            for (let i = index; i < mang.length; i++) {
+                mang[i] = mang[i + 1];
+                mang.unshift();
+            }
+            document.getElementById('result').innerHTML = 'Mảng sau khi loại bỏ phần tử với vị trí index = [' + index + '] là ' + '[' + mang + ']';
+        } else {
+            document.getElementById('result').innerHTML = 'Mảng không hợp lệ nên mảng giữ nguyên vị trí: [' + mang + ']';
+        }
+    }
+    tryRemoveFromArray(mang, index);
+</script>
+
+</html>

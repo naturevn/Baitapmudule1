@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài 1</title>
+</head>
+
+<body>
+    <h2>Cho danh sách các điểm thi ở trong một mảng. hãy viết hàm findMinScore() với đầu vào là một mảng điểm và đầu ra là điểm số thấp nhất được tìm thấy trong danh sách đó</h2>
+    <fieldset>
+        <legend>Bài 1</legend>
+        <span id="result"></span>
+    </fieldset>
+</body>
+<script>
+    let mangdiem = [2, 4, 0, 5, 1];
+    let min = mangdiem[0];
+
+    function findMinScore() {
+        for (let i = 0; i < mangdiem.length; i++) {
+            if (min > mangdiem[i])
+                min = mangdiem[i];
+        }
+        document.getElementById('result').innerHTML = 'số điểm thấp nhất trong danh sách ' + min;
+    }
+    findMinScore(mangdiem);
+</script>
+
+</html>
